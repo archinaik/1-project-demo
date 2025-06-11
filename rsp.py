@@ -95,11 +95,10 @@ if __name__ == "__main__":
         description="Provides a personalized game experience."
     )
 
-    parser.add_argument(
-        '-n', '--name', metavar='name',
-        required=True, help='The name of the person playing the game.'
-    )
-
+     parser.add_argument(
+    '-n', '--name', metavar='name',
+    default='PlayerOne', help='The name of the person playing the game (default: PlayerOne).'
+)
     args = parser.parse_args()
 
     rock_paper_scissors = rps(args.name)
